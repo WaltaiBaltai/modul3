@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+  color: #fff;
 }
 a {
   text-decoration: none;
@@ -18,12 +19,91 @@ header {
   background-color: #19849B;
   padding-top: 12px;
 }
+main {
+  padding: 51px 0 100px 0;
+  background: #262626;
+}
 .header-title {
   font-weight: bold;
   font-size: 30px;
   line-height: 34px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: #fff;
   text-align: center;
+}
+.myself {
+  display: flex;
+}
+.myself-image {
+  background-image: url(./imgs/Lucas_pic.png);
+  width: 411px;
+  height: 355px;
+  margin: 0 68px 0 0;
+}
+.myself-block {
+  width: 559px;
+}
+.myself-line {
+  max-width: 559px;
+  height: 4px;
+  background: #19849B;
+  margin: 14px 0 12px 0;
+}
+.myself-block__bio {
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+}
+.myself-block__one {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+.myself-block__two {
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  margin: 30px 0;
+}
+.contactme button{
+  width: auto;
+  height: 45px;
+  border: 2px solid white;
+  cursor: pointer;
+  background-color: #262626;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0 65px;
+}
+.contactme button:hover {
+  background: #19849B;
+}
+@media screen and (max-width: 990px) {
+  main {
+    padding: 51px 3px 51px 3px;
+  }
+  .container {
+    max-width: 768px;
+  }
+  .myself {
+    display: block;
+  }
+  .myself-image {
+    width: auto;
+    max-width: 762p;
+    margin: 0 0 65px 0;
+    background-size: 100% 100%;
+  }
+  .myself-block {
+    width: auto;
+  }
+  .myself-block__two {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 565px) {
+  .myself-block__two {
+    margin-bottom: 20px;
+  }
 }
