@@ -5,8 +5,9 @@
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
 }
-a {
+p, h2, h3 {
   text-decoration: none;
+  letter-spacing: 0.01em;
 }
 .container {
   max-width: 1038px;
@@ -27,7 +28,6 @@ main {
   font-weight: bold;
   font-size: 30px;
   line-height: 34px;
-  letter-spacing: 0.01em;
   text-transform: uppercase;
   text-align: center;
 }
@@ -52,17 +52,14 @@ main {
 .myself-block__bio {
   font-size: 30px;
   line-height: 34px;
-  letter-spacing: 0.01em;
 }
 h2 {
   font-size: 24px;
   line-height: 28px;
-  letter-spacing: 0.01em;
 }
 h3 {
   font-size: 16px;
   line-height: 18px;
-  letter-spacing: 0.01em;
   font-weight: 400;
 }
 .myself-block__two {
@@ -76,7 +73,6 @@ h3 {
   background-color: #262626;
   font-size: 18px;
   line-height: 18px;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0 65px;
 }
@@ -94,9 +90,61 @@ h3 {
 .portfolio-example {
   width: 244px;
   height: 244px;
+  cursor: pointer;
+  position: relative;
+}
+.portfolio-example::before {
+  content: '';
+  display: block;
+  background: linear-gradient(0deg, rgba(25, 132, 155, 0.5), rgba(25, 132, 155, 0.5));
+}
+.portfolio-example:hover::before {
+  height: 100%;
+  content: url(./imgs/Vector.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .portfolio-title {
   margin-top: 104px;
+}
+footer {
+  background: #19849B;
+}
+.footer-info {
+  height: 205px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.footer-rights {
+  height: 44px;
+  background: #16758A;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 44px;
+  text-align: center;
+}
+.myself-image.bottom {
+  width: 133px;
+  height: 133px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 30px;
+}
+.footer-info__name {
+  font-size: 22px;
+  line-height: 25px;
+  text-transform: uppercase;
+  align-items: center;
+  margin-top: 20px;
+}
+.footer-info__number {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 6px 0;
 }
 
 /*----------ADAPTIVE-------------*/
@@ -163,5 +211,11 @@ h3 {
   .portfolio-example {
     width: 165px;
     height: 165px;
+  }
+  footer {
+    padding: 0 0 0 3px;
+  }
+  .myself-image.bottom {
+    margin-right: 10px;
   }
 }
