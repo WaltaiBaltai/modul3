@@ -54,14 +54,18 @@ main {
   line-height: 34px;
   letter-spacing: 0.01em;
 }
-.myself-block__one {
+h2 {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.01em;
 }
-.myself-block__two {
+h3 {
+  font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.01em;
+  font-weight: 400;
+}
+.myself-block__two {
   margin: 30px 0;
 }
 .contactme button{
@@ -78,6 +82,36 @@ main {
 }
 .contactme button:hover {
   background: #19849B;
+}
+.portfolio-text {
+  margin: 15px 0 28px 0;
+}
+.portfolio-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.portfolio-example {
+  width: 244px;
+  height: 244px;
+}
+.portfolio-title {
+  margin-top: 104px;
+}
+
+/*----------ADAPTIVE-------------*/
+
+@media screen and (max-width: 1036px) {
+  .portfolio-example {
+    width: 230px;
+    height: 230px;
+  }
+  .portfolio-examples {
+    justify-content: space-around;
+  }
+  main {
+    padding: 51px 3px 51px 3px;
+  }
 }
 @media screen and (max-width: 990px) {
   main {
@@ -101,9 +135,33 @@ main {
   .myself-block__two {
     margin-bottom: 25px;
   }
+  .portfolio-title {
+    margin-top: 60px;
+  }
+  .portfolio-examples {
+    gap: 14px;
+  }
+  .portfolio-example {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio-examples {
+    justify-content: baseline;
+  }
 }
 @media screen and (max-width: 565px) {
   .myself-block__two {
     margin-bottom: 20px;
+  }
+  .portfolio-title {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .portfolio-example {
+    width: 165px;
+    height: 165px;
   }
 }
