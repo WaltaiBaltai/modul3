@@ -22,7 +22,20 @@
         <div class="myself-line"></div>
         <h2 class="myself-block__one">Curabitur blanit tempus porttitor. Vollis ac inceptos mollisestor commodo luctus.</h2>
         <h3 class="myself-block__two">Curabitur blandit tempus porttitor. Vollis ac inceptos mollisestor commodo luctus. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligulas semper. Cum sociis natoque penatibus et magnis maecenas. Donec ullamcorper nulla non metus auctor fringilla.</h3>
-        <div class="contactme"><button type="submit"><b>Contact Me</b></button></div>
+        <button onclick="document.getElementById('id01').style.display='block'"><b>Contact Me</b></button>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none' "class="close" title="Close Modal">&times;</span>
+          <form class="modal-content animate" action="index2.html">
+            <div class="modal-container">
+              <h2 class="modal-title">Contact Me</h2>
+              <h3 class="modal-info">Curabitur blandit tempus porttitor. Vollis ac inceptos mollisestor commodo luctus. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</h3>
+              <input type="text" placeholder="Enter Username" name="uname" required class="modal-username__input">
+              <input type="email" placeholder="Enter Email" name="email" required class="modal-email__input">
+              <div><textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required></textarea></div>
+              <div><button type="submit">Send message</button></div>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <section class="portfolio container">
@@ -51,5 +64,6 @@
     </section>
     <section class="footer-rights"><p>All rights reserved. “World Photos”, Inc</p></section>
   </footer>
+  <script src="js.js"></script>
 </body>
 </html>
